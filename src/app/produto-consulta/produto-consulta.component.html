@@ -1,0 +1,49 @@
+<section>
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <h2 style="color:blue; float:left">
+      ::..CONSULTA DE PRODUTOS..::
+      </h2><br/><br/>
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NOME DO PRODUTO</th>
+                <th scope="col">FABRICANTE</th>
+                <th scope="col">DESCRIÇÃO</th>
+                <th scope="col">PREÇO DE CUSTO</th>
+                <th scope="col">PREÇO DE VENDA - PDV</th>
+                <th scope="col">QUANTIDADE</th>
+                <th scope="col">#</th>                
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of produtos">
+              <tr>
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.nomeProduto}}</td>
+                <td>{{item.fabricante}}</td>
+                <td>{{item.descricao}}</td>
+                <td>{{item.valorCusto}}</td>
+                <td>{{item.valorPdv}}</td>
+                <td>{{item.quantidade}}</td>
+                <td>
+                  <button class="btn btn-info btn-sm">
+                    Atualizar
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-danger btn-sm">
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

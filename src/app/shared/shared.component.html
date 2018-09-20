@@ -1,0 +1,13 @@
+
+  <form class="novalidate">
+      <div class="form-group" [class.has.success]="hasSuccess()" [class.has.error]="hasError()">
+        
+        <ng-content></ng-content>
+      
+        <span class="help-block" *ngIf="hasSuccess()"><i class="fa fa-check">Ok</i></span>
+        <span class="help-block" *ngIf="hasError()"><i class="fa fa-remove">{{errorMessage}}</i></span>
+        
+      </div>      
+     
+    
+    </form>  

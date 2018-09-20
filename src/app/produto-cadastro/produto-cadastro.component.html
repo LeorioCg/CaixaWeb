@@ -1,0 +1,62 @@
+<section>
+  
+<div class="container"><br/>
+  <h4 style="color:blue; float:left">
+    CADASTRO DE CLIENTES
+  </h4><br/><br/>
+  
+<div class="row">
+  <div class="col-sm-6 col-xs-2">
+      <validate-container label="Nome do Produto" errorMessage="Campo Obrigátorio, insira o Nome do Produto">
+        <input class="form-control" name="nomeProduto" placeholder="Nome do Produto" required ngModel minlength="5" autocomplete="off">
+      </validate-container>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-xs-2">
+        <validate-container label="Fabricante" errorMessage="Campo Obrigátorio, insira o Fabricante">
+          <input class="form-control" name="fabricante" placeholder="Fabricante" ngModel required minlength="5" autocomplete="off">
+        </validate-container>
+    </div>
+  </div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <validate-container label="Preço de Custo" errorMessage="Campo Obrigátorio, insira o Preço de Custo">
+            <input class="form-control" type="text" name="valorCusto" placeholder="Preço de Custo" ngModel required minlength="1" autocomplete="off">
+          </validate-container>       
+    </div>
+    <div class="col-sm-4">
+        <validate-container label="Preço de Venda" errorMessage="Campo Obrigátorio, insira o Preço de Venda no PDV">
+          <input class="form-control" type="text" name="valorPdv" placeholder="Preço de Venda - PDV" ngModel required minlength="1" autocomplete="off">
+        </validate-container>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-sm-4 col-xs-6">      
+      <validate-container label="Descrição" errorMessage="Campo Obrigátorio, insira uma Descrição">
+       <textarea class="form-control" name="descricao" type="text" placeholder="Descrição" ngModel rows="4" required minlength="10" autocomplete="off"></textarea>
+      </validate-container>
+  </div>
+  <div class="col-sm-4">
+    <validate-container label="Quantidade" errorMessage="Campo Obrigátorio, insira a quantidade">
+      <input class="form-control" type="number" name="quantidade" placeholder="quantidade" ngModel required minlength="1" autocomplete="off">
+    </validate-container>
+</div>
+</div>   
+  <div class="row">
+      <div class="col-sm-4 col-xs-6">
+          <button (click)="insert()" class="btn btn-primary">Cadastrar</button>
+        </div>
+  </div>
+
+  
+
+  
+
+</div>
+  
+  
+</section>
