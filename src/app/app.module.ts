@@ -8,20 +8,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProdutoProvider } from './servicos/produto.servico';
 import { ProdutoConsultaComponent } from './produto-consulta/produto-consulta.component';
+import { ClienteCadastroComponent } from './cliente-cadastro/cliente-cadastro.component';
+import { ClienteProvider } from './servicos/cliente.servico';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoCadastroComponent,
     SharedComponent,
-    ProdutoConsultaComponent
+    ProdutoConsultaComponent,
+    ClienteCadastroComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,    
     FormsModule
   ],
-  providers: [ProdutoProvider],
+  providers: [ProdutoProvider, ClienteProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

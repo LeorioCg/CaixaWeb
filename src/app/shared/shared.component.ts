@@ -22,7 +22,7 @@ export class SharedComponent implements OnInit {
   ngAfterContentInit() {
     this.input = this.model;
     this.textarea = this.model;
-    if(this.input || this.textarea === undefined)
+    if(this.input === undefined || this.textarea === undefined)
     throw new Error('Esse componente precisa ser usado com uma diretiva NgModel');
     
   }

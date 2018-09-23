@@ -17,7 +17,7 @@ export class ProdutoCadastroComponent implements OnInit {
   ngOnInit() {
   }
 
-  insert(){
+  insertProduto(){
     return this.service.grava(this.produto);
 }
 

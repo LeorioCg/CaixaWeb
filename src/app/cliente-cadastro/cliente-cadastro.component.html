@@ -1,0 +1,61 @@
+<section>
+  
+  <div class="container"><br/>
+    <h4 style="color:blue; float:left">
+      CADASTRO DE CLIENTES
+    </h4><br/><br/>
+    
+  <div class="row">
+    <div class="col-sm-6 col-xs-2">
+        <validate-container label="Nome do Cliente" errorMessage="Campo Obrigatório, insira o Nome do Cliente">
+          <input class="form-control" name="nome" placeholder="Nome do Cliente" required [(ngModel)]="cliente.nome" minlength="5" autocomplete="off">
+        </validate-container>
+    </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-sm-6 col-xs-2">
+          <validate-container label="Email" errorMessage="Campo Obrigatório, insira o Email">
+            <input class="form-control" type="email" name="email" placeholder="Email" [(ngModel)]="cliente.email" required minlength="5" autocomplete="off">
+          </validate-container>
+      </div>
+    </div>
+  
+  <div class="row">
+      <div class="col-sm-4">
+          <validate-container label="CPF" errorMessage="Campo Obrigatório, insira o CPF do cliente">
+              <input class="form-control" type="text" name="cpf" placeholder="CPF" [(ngModel)]="cliente.cpf" required minlength="1" autocomplete="off">
+            </validate-container>       
+      </div>
+      <div class="col-sm-4">
+          <validate-container label="Identidade" errorMessage="Campo Obrigatório, insira o numero do RG do cliente">
+            <input class="form-control" type="text" name="rg" placeholder="RG" [(ngModel)]="cliente.rg" required minlength="1" autocomplete="off">
+          </validate-container>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+          <validate-container label="Telefone Celular" errorMessage="Campo Obrigátorio, insira o numero do celular">
+              <input class="form-control" type="text" name="telCel" placeholder="Telefone Celular" [(ngModel)]="cliente.telCel" required minlength="7" autocomplete="off">
+            </validate-container>       
+      </div>
+      <div class="col-sm-4">
+          <validate-container label="Telefone Fixo" errorMessage="Campo Obrigátorio, insira o numero do Telefone Fixo do cliente">
+            <input class="form-control" type="text" name="telFixo" placeholder="Telefone Fixo" [(ngModel)]="cliente.telFixo" required minlength="7" autocomplete="off">
+          </validate-container>
+      </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-4 col-xs-6">
+            <button (click)="insertCliente()" class="btn btn-primary">Cadastrar</button>
+          </div>
+    </div>   
+  
+    
+  
+  </div>
+    
+    
+  </section>
